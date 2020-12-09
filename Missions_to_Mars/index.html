@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Latest Mars News</h2>
+        <h3>{{ mars.news_title }}</h3>
+        <h3>{{ mars.news_p }}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Featured Mars Image</h2>
+        <!-- hace falta actualizar esta linea -->
+        <a href="{{ mars.featured_image }}">Featured Mars Image</a> 
+      </div>
+      <div class="col-md-4">
+        <h2>Latest Mars Weather Report</h2>
+        <h3>{{ mars.weather}}</h3>
+        <hr/>
+        <h2>Mars Facts</h2>
+        <!-- aqui hy ue insertar la table -->
+        {{ mars.facts}}
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        {{ mars.hemispheres.title[0]}}
+        {{ mars.hemispheres.img_url[0]}}
+      </div>
+      <div class="col-md-6">
+        {{ mars.hemispheres.title[1]}}
+        {{ mars.hemispheres.img_url[1]}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        {{ mars.hemispheres.title[2]}}
+        {{ mars.hemispheres.img_url[2]}}
+      </div>
+      <div class="col-md-6">
+        {{ mars.hemispheres.title[3]}}
+        {{ mars.hemispheres.img_url[3]}}
+      </div>
+    </div>
+  </div> -->
+
+
+</body>
+
+</html>
